@@ -5,7 +5,7 @@ function rnd(l, u){
 }
 
 window.addEventListener("DOMContentLoaded",function() {
-  scene = document.querySelector("a-scene"); //CSS Selector
+ scene = document.querySelector("a-scene"); //CSS Selector
 
   for(let i = 0; i < 100; i++){
     let x = rnd(-20,20);
@@ -26,9 +26,20 @@ window.addEventListener("DOMContentLoaded",function() {
 */
 
 
-function 
- let cloud = document.createElement("a-sphere");
+function createCloud(x, y, z){
+let cloud = document.createElement("a-entity");
 
+let sphere = document.createElement("a-sphere");
+sphere.setAttribute("position","0 0 0");
+sphere.setAttribute("height","4");
+cloud.append(sphere);
+
+
+
+
+cloud.setAttribute("position",{x:x, y:y, z:z});
+scene.append(cloud);
+}
 
 
 
