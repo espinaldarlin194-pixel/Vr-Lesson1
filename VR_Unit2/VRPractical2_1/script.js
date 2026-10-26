@@ -12,8 +12,9 @@ window.addEventListener("DOMContentLoaded",function() {
     let z = rnd(-20,20);
     createTree(x,0,z);
   }
-   //Task 2: Use the createCloud(...)  to add several clouds to the scene at various positions.
-   //Task 4: Use the createHouse(...)  to add several houses to the scene at various positions.
+   /*Task 2: Use the createCloud(...)  to add several clouds to the scene at various positions.
+   Task 4: Use the createHouse(...)  to add several houses to the scene at various positions.
+   */
 })
 
 /* Task 1: Create a function createCloud that,
@@ -30,15 +31,15 @@ function createCloud(x, y, z){
 let cloud = document.createElement("a-entity");
 
 let sphere = document.createElement("a-sphere");
-sphere.setAttribute("position","0 0 0");
+sphere.setAttribute("position","0 4 0");
 sphere.setAttribute("height","4");
-cloud.append(sphere);
+cloud.append( sphere );
 
 
 
 
 cloud.setAttribute("position",{x:x, y:y, z:z});
-scene.append(cloud);
+scene.append( cloud )
 }
 
 
