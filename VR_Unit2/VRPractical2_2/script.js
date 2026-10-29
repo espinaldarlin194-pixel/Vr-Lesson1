@@ -8,8 +8,8 @@ window.addEventListener("DOMContentLoaded",function() {
     dude = document.querySelector("#dude");
 
 
-    dude.x = 4;
-    dude.dx = 2;
+    dude.y = 0;
+    dude.dy = 0.05;
 
     pokemonball.x = 4;
     pokemonball.dx =2;
@@ -39,8 +39,9 @@ function loop(){
         pokemonball.x += pokemonball.dx
         pokemonball.setAttribute("rotation",{x:pokemonball.x ,y:0,z:0})
 
-        dude.x += dude.dx
-        dude.setAttribute("height",dude.x);
+        dude.y += dude.dy
+        dude.setAttribute("scale",{x:1 , y:dude.y ,z:0});
+
         
         
         window.requestAnimationFrame(loop);
