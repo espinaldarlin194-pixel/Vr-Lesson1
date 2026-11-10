@@ -10,9 +10,9 @@ window.addEventListener("DOMContentLoaded",function() {
 
 
     for(let i =0; i < 100; i++){
-    let x = rnd(-20,20);
+    let x = rnd(-20,50);
     let y = rnd(6,20)
-    let z = rnd(-20,20);
+    let z = rnd(-20,50);
     let speed = rnd(2,6) / 100;
     rocket = new Rocket(x,y,z);
     rockets.push(rocket);
