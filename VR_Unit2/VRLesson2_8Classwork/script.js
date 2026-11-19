@@ -10,9 +10,8 @@ window.addEventListener("DOMContentLoaded",function() {
 
 function loop(){
   target.a += target.da;
-
-  if(target.a <= -Math.PI / -2 || target.a >= Math.PI / -2){
-    target.da = -target.da;
+  if(target.a <=-90){
+    target.da= 0;
   }
 
   target.setAttribute("rotation",{x:target.a, y:0, z: 0});
